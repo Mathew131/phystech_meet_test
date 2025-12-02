@@ -14,7 +14,7 @@ conn = psycopg2.connect(
 
 cur = conn.cursor()
 
-# TIMESTAMPTZ - время хранится в utc, но при select показывается в выбранном часовом поясе
+# TIMESTAMPTZ - время хранится в utc, но при select показывается в выбранном часовом поясе 
 cur.execute("""
 CREATE TABLE IF NOT EXISTS users (
     telegram_id bigint PRIMARY KEY,
